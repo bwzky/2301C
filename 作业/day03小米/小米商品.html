@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    .box{
+        display: flex;
+        height: 100%;
+    }
+    .zuo{
+        width: 15%;
+        /* background-color: #e62121; */
+    }
+    .zhong{
+        width: 70%;
+        /* background-color: #1aaef8; */
+    }
+    .you{
+        width: 15%;
+        /* background-color: #ee09ad; */
+    }
+    .top{
+        width: 100%;
+        height: 40px;
+        line-height: 40px;
+        background-color: #333333;
+        display: flex;
+        
+    }
+    .top1{
+        margin-left: 15%;   
+        width: 53%;
+        display: flex;
+    }   
+    .p1{
+        height: 20px;
+        margin-top: 10px;
+        border-right: 1px solid #ccc;
+        padding: 0px 10px;
+        color: #ccc;
+        font-size: 11px;
+        line-height: 20px;
+    }
+    .top2{
+        /* margin-left: 10px;*/
+        color: #ccc;
+        display: flex;
+    }
+    .shang{
+        display: flex;
+        height: 50px;
+        line-height: 50px;
+    }
+    .let2{
+    display: flex; 
+    margin-left: 30px;
+    
+    }
+    .let2  p{
+        margin-left: 20px;
+    }
+    
+    input{
+        width: 200px;
+        margin-left: 20px;
+        height: 30px;
+        border: 1px solid #ccc;
+    }
+    button{
+        width: 60px;
+        height: 30px;
+        border: 1px solid #ccc;
+    }
+    ul{
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+    li{
+        width: 19%;
+        text-align: center;
+        list-style: none;
+        border: 1px solid #ccc;
+        height: 200px;
+    }
+    li img{
+        margin-top: 30px;
+    }
+    .biao{
+        color: #ff710b;
+        font-size: 25px;
+        margin: 10px 0px;
+    }
+</style>
+<body>
+    <div class="top">
+        <div class="top1">
+            <p class="p1">小米官网</p>
+            <p class="p1">小米商城</p>
+            <p class="p1">MIUI</p>
+            <p class="p1">IoT</p>
+            <p class="p1">云服务</p>
+            <p class="p1">天星数科</p>
+            <p class="p1">有有</p>
+            <p class="p1">小爱开放平台</p>
+            <p class="p1">资质证照</p>
+            <p class="p1">协议规则</p>
+            <p class="p1">下载app</p>
+            <p class="p1">Select Location</p>
+        </div>
+            <div class="top2">
+                <p class="p1">登录</p>
+                <p class="p1">注册</p>
+                <p class="p1">消息通知</p>
+                <p class="p1">购物车</p>
+            </div>
+    
+    </div>
+    <div class="box">
+        <div class="zuo"></div>
+        <div class="zhong">
+           <div class="shang">
+            <div class="let1">
+                <img src="./Snipaste_2023-10-26_17-26-50.png" alt="">
+            </div>
+            <div class="let2">
+                <p>全部商品分类</p>
+                <p>Xiaomi手机</p>
+                <p>Redmi手机</p>
+                <p>电视</p>
+                <p>笔记本</p>
+                <p>平板</p>
+                <p>家电</p>
+                <p>路由器</p>
+                <p>服务中心</p>
+                <p>社区</p>
+            </div>
+            <div class="let3">
+                <input type="text">
+                <button>搜索</button>
+            </div>
+           </div>
+
+            <p class="biao">手机</p>
+
+           
+           <ul>
+            <li>
+                <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/5c57d3a5e8a2fde79bcffce9d5344c80.png" alt="">
+                <p>Xiaomi MIX系列</p>
+            </li>
+            <li>
+                <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/168b20a5ea19280f9ddb3cc423f1db4e.png" alt="">
+                <p>Xiaomi 数字系列</p>
+            </li>
+            <li>
+                <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/4ed8c4ca59357db902916b5b9dfb8016.png" alt="">
+                <p>Xiaomi Civi系列</p>
+            </li>
+            <li>
+                <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/42436481ce985c1f69be688a15d7531e.png" alt="">
+                <p>Redmi K系列</p>
+            </li>
+            <li>
+                <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/2a6dfdc51ff25583042e86d9ae2697b3.png" alt="">
+                <p>Redmi Note系列</p>
+            </li>
+            <li>
+                <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/c15a3d1b4e8bf2af17e6b5ad5559cfcb.png" alt="">
+                <p>Redmi 数字系列</p>
+            </li>
+           </ul>
+
+           <p class="biao">电视</p>
+
+           
+           <ul>
+            <li>
+                <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/e7c220135ef5541ea26b795acc05ff69.png" alt="">
+                <p>小米电视 S Pro Mini LED</p>
+            </li>
+            <li>
+                <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/8acce2de38a7b1a0135052f9bc6914f1.png" alt="">
+                <p>小米电视 大师系列</p>
+            </li>
+            <li>
+                <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/c2e3fdbf6fe7a13c06644f16c8dc8877.png" alt="">
+                <p>小米电视 S系列</p>
+            </li>
+            <li>
+                <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/a11f943158d05158b52bccf0a714acab.png" alt="">
+                <p>小米电视 EA系列</p>
+            </li>
+            <li>
+                <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/2821b71e75aa7c180a485cde99bf711a.png" alt="">
+                <p>Redmi电视 MAX系列</p>
+            </li>
+            <li>
+                <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/0fa0168483dbd7414b22b8762595454e.png" alt="">
+                <p>Redmi电视 A系列</p>
+            </li>
+            <li>
+                <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/a4b477b5e44c1b9eb7d75c55f1c3f440.png" alt="">
+                <p>小米电视A竞技系列</p>
+            </li>
+           </ul>
+
+           <p class="biao">家电</p>
+
+           
+           <ul>
+           
+            <li>
+                <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/8acce2de38a7b1a0135052f9bc6914f1.png" alt="">
+                <p>小米电视 大师系列</p>
+            </li>
+            <li>
+                <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/c2e3fdbf6fe7a13c06644f16c8dc8877.png" alt="">
+                <p>小米电视 S系列</p>
+            </li>
+            <li>
+                <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/5c57d3a5e8a2fde79bcffce9d5344c80.png" alt="">
+                <p>Xiaomi MIX系列</p>
+            </li>
+            <li>
+                <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/a11f943158d05158b52bccf0a714acab.png" alt="">
+                <p>小米电视 EA系列</p>
+            </li>
+            <li>
+                <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/2821b71e75aa7c180a485cde99bf711a.png" alt="">
+                <p>Redmi电视 MAX系列</p>
+            </li>
+            <li>
+                <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/0fa0168483dbd7414b22b8762595454e.png" alt="">
+                <p>Redmi电视 A系列</p>
+            </li>
+            <li>
+                <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/a4b477b5e44c1b9eb7d75c55f1c3f440.png" alt="">
+                <p>小米电视A竞技系列</p>
+            </li>
+            <li>
+                <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/5c57d3a5e8a2fde79bcffce9d5344c80.png" alt="">
+                <p>Xiaomi MIX系列</p>
+            </li>
+            <li>
+                <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/5c57d3a5e8a2fde79bcffce9d5344c80.png" alt="">
+                <p>Xiaomi MIX系列</p>
+            </li>
+           </ul>
+
+           <p class="biao">笔记本 平板</p>
+
+           
+           <ul>
+            <li>
+                <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/5c57d3a5e8a2fde79bcffce9d5344c80.png" alt="">
+                <p>Xiaomi MIX系列</p>
+            </li>
+           
+            <li>
+                <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/5c57d3a5e8a2fde79bcffce9d5344c80.png" alt="">
+                <p>Xiaomi MIX系列</p>
+            </li>
+            <li>
+                <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/a11f943158d05158b52bccf0a714acab.png" alt="">
+                <p>小米电视 EA系列</p>
+            </li>
+            <li>
+                <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/2821b71e75aa7c180a485cde99bf711a.png" alt="">
+                <p>Redmi电视 MAX系列</p>
+            </li>
+            <li>
+                <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/0fa0168483dbd7414b22b8762595454e.png" alt="">
+                <p>Redmi电视 A系列</p>
+            </li>
+            <li>
+                <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/a4b477b5e44c1b9eb7d75c55f1c3f440.png" alt="">
+                <p>小米电视A竞技系列</p>
+            </li>
+            <li>
+                <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/5c57d3a5e8a2fde79bcffce9d5344c80.png" alt="">
+                <p>Xiaomi MIX系列</p>
+            </li>
+          
+            <li>
+                <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/8acce2de38a7b1a0135052f9bc6914f1.png" alt="">
+                <p>小米电视 大师系列</p>
+            </li>
+            <li>
+                <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/c2e3fdbf6fe7a13c06644f16c8dc8877.png" alt="">
+                <p>小米电视 S系列</p>
+            </li>
+           </ul>
+
+           <p class="biao">手机</p>
+
+           
+           <ul>
+            <li>
+                <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/5c57d3a5e8a2fde79bcffce9d5344c80.png" alt="">
+                <p>Xiaomi MIX系列</p>
+            </li>
+            <li>
+                <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/8acce2de38a7b1a0135052f9bc6914f1.png" alt="">
+                <p>小米电视 大师系列</p>
+            </li>
+            <li>
+                <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/c2e3fdbf6fe7a13c06644f16c8dc8877.png" alt="">
+                <p>小米电视 S系列</p>
+            </li>
+            <li>
+                <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/5c57d3a5e8a2fde79bcffce9d5344c80.png" alt="">
+                <p>Xiaomi MIX系列</p>
+            </li>
+            <li>
+                <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/5c57d3a5e8a2fde79bcffce9d5344c80.png" alt="">
+                <p>Xiaomi MIX系列</p>
+            </li>
+           
+            <li>
+                <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/5c57d3a5e8a2fde79bcffce9d5344c80.png" alt="">
+                <p>Xiaomi MIX系列</p>
+            </li>
+           </ul>
+            
+
+        </div>
+        <div class="you"></div>
+    </div>
+    
+</body>
+</html>
+
+<script>
+
+</script>

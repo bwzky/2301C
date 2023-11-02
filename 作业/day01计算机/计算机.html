@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+.cal{
+    width: 300px;
+    margin: 150px auto;
+     
+}
+ .cal table{
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 10px;
+ }
+ .cal td{
+    border: 1px solid #cccc;
+    text-align: center;
+    width: 150px;
+    height: 70px;
+ }
+ #output{
+    width: 100%;
+    height: 100px;
+ }
+ textarea{
+    width: 290px;
+ }
+
+</style>
+<body>
+    <div class="cal">
+        <textarea class="output"></textarea>
+            <table>
+                <tr>
+                    <td onclick="append('1')">1</td>
+                    <td onclick="append('2')">2</td>
+                    <td onclick="append('3')">3</td>
+                    <td onclick="calculate('=')" id="equal" class="operator">=</td>
+                    <td onclick="append('+')" class="operator">+</td>
+                </tr>
+                <tr>
+                    <td onclick="append('4')">4</td>
+                    <td onclick="append('5')">5</td>
+                    <td onclick="append('6')">6</td>
+                    <td >Back</td>
+                    <td onclick="append('-')" class="operator">-</td>
+                </tr>
+                <tr>
+                    <td onclick="append('7')">7</td>
+                    <td onclick="append('8')">8</td>
+                    <td onclick="append('9')">9</td>
+                    <td onclick="clear()" >c</td>
+                    <td onclick="append('*')" class="operator">*</td>
+                </tr>
+                <tr>
+                    <td onclick="append('0')" class="zero">0</td>
+                    <td onclick="append('.')">.</td>
+                    <td onclick="append('/')" class="operator">/</td>
+                    
+                </tr>
+            </table>
+        
+    </div>
+</body>
+</html>
+<script>
+    var num1=document.querySelector('.output')
+
+    function append(value){
+        this.num1.value+=value
+    }
+   
+        function calculate(){
+            this.num1.value=eval(this.num1.value)
+        }
+        
+        function clear(){
+            document.querySelector('.output').value=''
+        }
+        
+</script>
