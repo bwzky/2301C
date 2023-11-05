@@ -16,7 +16,7 @@
     </div>
     <van-cell bottom="30px" :style="'background-color:' + ys" />
     <ul :style="'background-color:' + ys">
-      <li v-for="item, index in list" :style="'background-color:' + ys">
+      <li v-for="item, index in list" :style="'background-color:' + ys" @click="tiao(item.id)">
         <img :src="item.pic" alt="">
         <div class="top">
           <p :style="bian == false ? { color: '#fff' } : { color: '#000' }">{{ item.name }}</p>
@@ -48,6 +48,8 @@
 <script lang="ts" setup>
 import { bannerAPI, goodsAPI } from '../http/api'
 import { ref } from 'vue';
+import { useRouter } from 'vue-router';
+const router=useRouter()
 const inof = ref({
   page: 1,
   pageSize: 10
@@ -68,6 +70,14 @@ goodsAPI(inof.value).then(res => {
   console.log(res);
   list.value = res.data.data.result
 })
+
+
+const tiao=(id:any)=>{
+  router.push({
+    path:'/xiang',
+    query:{id:id}
+  })
+}
 
 const add = () => {
   ys.value = '#fff'

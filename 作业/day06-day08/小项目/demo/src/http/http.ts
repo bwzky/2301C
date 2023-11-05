@@ -5,8 +5,12 @@ class Request{
     constructor(){
         this.instance=axios.create({
             baseURL:'https://api.it120.cc/xiaochengxu/',
-            timeout:20000
+            timeout:20000,
+            headers:{
+                'Content-Type': 'application/x-www-form-urlencoded'
+                }
         })
+        this.int()
 
     }
     reqint(){

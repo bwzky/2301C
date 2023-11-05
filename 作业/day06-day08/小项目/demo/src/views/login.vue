@@ -6,14 +6,14 @@
     <van-form @submit="onSubmit">
   <van-cell-group inset>
     <van-field
-      v-model="inof.username"
+      v-model="inof.mobile"
       name="中国+86"
       label="中国+86"
       placeholder="请输入手机号"
       :rules="[{ required: true, message: '手机号错误' }]"
     />
     <van-field
-      v-model="inof.password"
+      v-model="inof.pwd"
       type="password"
       placeholder="密码"
       :rules="[{ required: true, message: '请填写密码' }]"
@@ -44,14 +44,14 @@
     <van-form @submit="zhuce">
   <van-cell-group inset>
     <van-field
-      v-model="name"
+      v-model="inof2.mobile"
       name="中国+86"
       label="中国+86"
       placeholder="请输入手机号"
       :rules="[{ required: true, message: '手机号错误' }]"
     />
     <van-field
-      v-model="yzm"
+      v-model="inof2.code"
       type="password"
       placeholder="请输入4位验证码"
       :rules="[{ required: true, message: '验证码错误' }]"
@@ -91,11 +91,15 @@ import {loginAPI} from '../http/api'
 import { ref } from 'vue';
 const router=useRouter()
 const flag=ref(false)
+const inof2=ref({
+  mobile:'',
+  code:''
+})
 const inof=ref({
-  username:'',
-  password:'',
-  // deviceId:'16983106199973322818',
-  // deviceName:'pc'
+  mobile:'',
+  pwd:'',
+  deviceId:'16983106199973322818',
+  deviceName:'pc'
 })
 const username =ref('')
 const password=ref('')

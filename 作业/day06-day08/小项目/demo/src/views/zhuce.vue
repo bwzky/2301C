@@ -18,7 +18,7 @@
       :rules="[{ required: true, message: '验证码错误' }]"
     >
     <template #button>
-        <p style="color: #70a5ef;">发送验证码</p>
+        <p style="color: #70a5ef;" @click="yz">发送验证码</p>
       <!-- <van-button size="small" type="primary">发送验证码</van-button> -->
     </template>
     </van-field>
@@ -53,12 +53,22 @@
 
 <script lang="ts" setup>
 import { ref } from 'vue';
+import {geetAPI} from '../http/api'
 const username =ref('')
 const password=ref('')
 const yzm=ref('')
 const checked=ref(false)
+const key=+new Date()
+console.log(key);
+
 const onSubmit=()=>{
 
+}
+
+const yz=()=>{
+  geetAPI(key).then(res=>{
+    console.log(res);
+  })
 }
 </script>
 
