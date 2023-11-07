@@ -49,7 +49,6 @@ img{
     width: 100%;
 }
 .p1{
-    
     color: #12a37e;
     span{
         font-size: 25px;

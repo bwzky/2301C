@@ -21,3 +21,12 @@ export const goodsAPI=(data:{page:number,pageSize:number})=>{
 export const reputation=(data:{goodsId:string,page:number,pageSize:number})=>{
     return Request.post('shop/goods/reputation/v2',data)
 }
+
+export const allAPI=()=>{
+    return Request.get('/shop/goods/category/all')
+}
+
+
+export const categoryAPI=(ategoryId:any)=>{
+    return Request.post('/shop/goods/list/v2',ategoryId)
+}

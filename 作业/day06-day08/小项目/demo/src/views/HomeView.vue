@@ -2,7 +2,7 @@
   <div :style="'background-color:' + ys">
     <van-tabbar route active-color="#20a884">
       <van-tabbar-item replace to="/" icon="home-o">首页</van-tabbar-item>
-      <van-tabbar-item replace to="/search" icon="apps-o">分类</van-tabbar-item>
+      <van-tabbar-item replace to="/fen" icon="apps-o">分类</van-tabbar-item>
       <van-tabbar-item replace to="/search" icon="shopping-cart-o">购物车</van-tabbar-item>
       <van-tabbar-item replace to="/my" icon="contact-o">个人中心</van-tabbar-item>
     </van-tabbar>
