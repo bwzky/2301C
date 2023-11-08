@@ -6,13 +6,17 @@
       </div>
       <h3>~今天我需要做的事情~</h3>
       <div class="tian">
-        <input type="text" placeholder="请输入未完成的list">
-        <button>添加</button>
+        <input type="text" v-model="value" placeholder="请输入未完成的list">
+        <button @click="arr">添加</button>
       </div>
 
 
       <div class="bun">
-        <p v-for="item,index in list" @click="add(index)" :class="xia==index?'ys':''" >{{ item.name }}</p>
+        <p @click="">3事项</p>
+        <p @click="about=1,zhuang=true" :class="about==1?'ys':''" >查看所有</p>
+        <p @click="about=2,zhuang=false" :class="about==2?'ys':''" >待完成</p>
+        <p @click="about=3,zhuang=null" :class="about==3?'ys':''" >已完成</p>
+        <p @click="about=4" :class="about==4?'ys':''" >清空所有</p>
       </div>
 
     </div>
@@ -23,18 +27,29 @@
 export default {
  data() {
    return {
-    list:[{name:'3事项'},{name:'查看所有'},{name:'待完成'},{name:'已完成'},{name:'清空所有'}],
+    list:JSON.parse(localStorage.getItem('list')) || [],
     xia:'',
+    about:0,
+    zhuang:false,
+    value:''
    };
  },
  methods: {
-  add(index){
-    this.xia=index
-  }
+  arr(){
+    this.list.push({name:this.value,flag:false})
+  },
+ 
  },
  computed: {},
  filters: {},
- watch: {}
+ watch: {
+  list:{
+    deep:true,
+    handler(val){
+      localStorage.setItem('list',JSON.stringify(val))
+    }
+  }
+ }
 };
 </script>
 
