@@ -24,7 +24,7 @@ console.log(shops);
 let boyobj=[]
 //女生数组
 let girlsobj=[]
-
+arrbox()
 function arrbox(){
     shops.forEach(item=>{
         if(item.sat==0){
@@ -66,39 +66,61 @@ function suiji(arr){
 
 var dian=''
 
+/**
+ * 清除定时器
+ */
+function clearInt(){
+    if(dian){
+        clearInterval(dian)
+     }
+}
+
+/**
+ * 颜色定时器
+ */
+function ysdian(){
+    dian=setInterval(() => {
+        domes()
+    }, 100);
+}
+
+/**
+ * 
+ */
+
 //随机点名
 function random(){
+    clearInt()
     if(one.innerText=='随机点名'){
         one.innerText='停止点名'
-        dian=setInterval(() => {
-            domes()
-        }, 100);
+        ysdian()
     }else{
          //清除定时器
-        clearInterval(dian)
+         clearInt()
+        
         one.innerText='随机点名'
-        let index=suiji(list)
+        let index=suiji(shops)
         cont.style.backgroundImage=rdGradient()
-        cont.innerHTML=list[index].name
+        cont.innerHTML=shops[index].name
         shops.splice(index,1)
+        console.log(shops.length);
     }
 }
 
 //双人点名
 function add(){
+    clearInt()
     if(two.innerText=='双人点名'){
         two.innerText='停止点名'
-        dian=setInterval(() => {
-            domes()
-        }, 100);
+        ysdian()
     }else{
         //清除定时器
-        clearInterval(dian)
+        clearInt()
         two.innerText='双人点名'
         let index=suiji(shops)
         let about=suiji(shops)
         cont.style.backgroundImage=rdGradient()
-        cont.innerHTML=list[index].name+','+list[about].name
+        cont.innerHTML=shops[index].name+','+shops[about].name
 
         let one=shops[index]
         let two1=shops[about]
@@ -111,16 +133,14 @@ function add(){
 
 //男生点名
 function male(){
-    arrbox()
+    clearInt()
     if(boy.innerText=='男生点名'){
         boy.innerText='停止点名'
         //定时器改变颜色
-        dian=setInterval(() => {
-            domes()
-        }, 100);
+        ysdian()
     }else{
          //清除定时器
-        clearInterval(dian)
+         clearInt()
         boy.innerText='男生点名'
         let index=suiji(boyobj)
         //渐变的颜色
@@ -137,16 +157,14 @@ function male(){
 
 //女生点名
 function female(){
-    arrbox()
+    clearInt()
     if(girls.innerText=='女生点名'){
         girls.innerText='停止点名'
         //定时器改变颜色
-        dian=setInterval(() => {
-            domes()
-        }, 100);
+        ysdian()
     }else{
          //清除定时器
-        clearInterval(dian)
+         clearInt()
         girls.innerText='女生点名'
         let index=suiji(girlsobj)
         //渐变的颜色
@@ -170,3 +188,4 @@ function Gradient(){
 function rdGradient(){
     return `linear-gradient(to right  top, rgb(${Gradient()},${Gradient()},${Gradient()}),rgb(${Gradient()},${Gradient()},${Gradient()}))`
 }
+    
